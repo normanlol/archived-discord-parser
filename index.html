@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ArchivedDiscordParser</title>
+        <link href="/css/main.css" rel="stylesheet">
+        <link href="/css/loading.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="main">
+            <h2>ArchivedDiscordParser</h2>
+            <p class="desc">View archived Discord messages with this simple viewer.</p>
+            <noscript>Javascript is required for this to run.</noscript>
+            <div class="requireScript">
+                <div style="margin-top:3.5px;">
+                    <button onclick="document.getElementById('file').click()">Upload JSON file</button>
+                    <input id="file" type="file" autocomplete="off" accept=".json" oninput="parse()">
+                </div>
+                <div id="loading" style="display:none;">
+                    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <p id="loadTxt">Please wait...</p>
+                </div>
+                <div id="messageContainer"></div>
+            </div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="/js/parser.js"></script>
+    <script src="/js/show.js"></script>
+</html>
