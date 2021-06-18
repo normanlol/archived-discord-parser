@@ -20,7 +20,7 @@ function parse() {
             img.src = "https://cdn.discordapp.com/avatars/" + c[b].author.id + "/" + c[b].author.avatar + ".png?size=128";
             img.classList.add("avatar");
             img.onerror = function () {
-                this.src = "/default.png"
+                this.src = "default.png"
             }
             main.append(img);
             var header = document.createElement("H2");
